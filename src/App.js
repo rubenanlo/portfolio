@@ -22,6 +22,14 @@ const Container = styled.div`
   & h1 {
     font-weight: 300;
   }
+
+  & h2 {
+    font-weight: 300;
+  }
+
+  & img {
+    margin-right: 0.5rem;
+  }
 `;
 
 function App() {
@@ -32,6 +40,23 @@ function App() {
           <Canvas />
           <h1>Ruben Andino</h1>
           <p>Full Stack Web Developer</p>
+          <a
+            href="https://www.linkedin.com/in/ruben-andino/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="../linkedin.svg" alt="linkedin" />
+          </a>
+          <a
+            href="https://github.com/rubenanlo"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="../github.svg" alt="github" />
+          </a>
+          <a href="mailto:randinocv@gmail.com">
+            <img src="../email.svg" alt="email" />
+          </a>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
