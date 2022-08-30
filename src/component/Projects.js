@@ -20,18 +20,29 @@ const ProjectContainer = styled.div`
 
   & div {
     margin-bottom: 1.5rem;
+    cursor: pointer;
   }
 
   & a {
     color: var(--white);
   }
+`;
 
+const DescriptionProject = styled.div`
   & .hide {
     display: none;
   }
 
-  & .container {
-    display: flex;
+  & .show {
+    position: absolute;
+    bottom: 32vh;
+    margin-left: 2rem;
+    right: 45vw;
+  }
+
+  & .show a {
+    color: var(--white);
+    margin-right: 1rem;
   }
 `;
 
@@ -51,9 +62,9 @@ function Projects() {
   };
 
   return (
-    <ProjectContainer>
+    <>
       {window.innerWidth < 1025 ? (
-        <>
+        <ProjectContainer>
           <div>
             <a
               href="https://planthatmeal.netlify.app/"
@@ -87,59 +98,112 @@ function Projects() {
               game.
             </p>
           </div>
-        </>
+        </ProjectContainer>
       ) : (
         <>
-          <div id="plan" className="container" onClick={toggleClass}>
-            <div id="plan" className={className.plan ? "" : "hide"}>
-              <p id="plan">
+          <DescriptionProject>
+            <div className={className.plan ? "show" : "hide"}>
+              <p>
                 PlanThatMeal is a MERN fullstack responsive web application that
                 was created based on the people's needs on planning their meals
-                for the week. This web application relies on a self created REST
-                API, with four models, upload image feature, and pure CSS.
+                for the week. This web application relies on a self-created REST
+                API, with CRUD functionality among four different models,
+                authentication, tailored content per type of user, and upload
+                image feature.
               </p>
+              <a
+                href="https://planthatmeal.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Website
+              </a>
+              <a
+                href="https://github.com/rubenanlo/plan-that-meal-client"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github (front end)
+              </a>
+              <a
+                href="https://github.com/rubenanlo/plan-that-meal-server"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github (back end)
+              </a>
             </div>
-            <div id="plan">
+            <div className={className.guit ? "show" : "hide"}>
+              <p>
+                GuitHub is a fullstack responsive web application that was
+                created to provide a platform where guitarists could share their
+                passion: guitars. This application was created based on express,
+                node.js, mongoDB, and handlebars, and included a self-created
+                REST API with CRUD functionality for 2 models (i.e., users,
+                guitars), authentication and tailored content per type of user.
+              </p>
+              <a
+                href="http://guithub.herokuapp.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Website
+              </a>
+              <a
+                href="https://github.com/rubenanlo/guithub"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github (full stack)
+              </a>
+            </div>
+            <div className={className.tick ? "show" : "hide"}>
+              <p>
+                Tick tock diaper is a responsive collision type of game that was
+                created with JavaScript(ES6), HTML5, and CSS3. This game relies
+                on classes, addEventListeners, DOM manipulation, and so much
+                more.
+              </p>
+              <a
+                href="https://rubenanlo.github.io/tick-tock-diaper/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Website
+              </a>
+              <a
+                href="https://github.com/rubenanlo/tick-tock-diaper"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
+            </div>
+          </DescriptionProject>
+
+          <ProjectContainer>
+            <div id="plan" onClick={toggleClass}>
               <h2 id="plan">PlanThatMeal</h2>
               <p id="plan">
                 Meal planner, recipes repository and shopping list generator.
               </p>
             </div>
-          </div>
-          <div className="container" onClick={toggleClass}>
-            <div id="guit" className={className.guit ? "" : "hide"}>
-              <p id="guit">
-                PlanThatMeal is a MERN fullstack responsive web application that
-                was created based on the people's needs on planning their meals
-                for the week. This web application relies on a self created REST
-                API, with four models, upload image feature, and pure CSS.
-              </p>
-            </div>
-            <div id="guit">
+
+            <div id="guit" onClick={toggleClass}>
               <h2 id="guit">GuitHub</h2>
               <p id="guit">Community to share guitars.</p>
             </div>
-          </div>
-          <div id="tick" className="container" onClick={toggleClass}>
-            <div className={className.tick ? "" : "hide"}>
-              <p>
-                PlanThatMeal is a MERN fullstack responsive web application that
-                was created based on the people's needs on planning their meals
-                for the week. This web application relies on a self created REST
-                API, with four models, upload image feature, and pure CSS.
-              </p>
-            </div>
-            <div>
+            <div id="tick" onClick={toggleClass}>
               <h2>Tick tock diaper</h2>
               <p>
                 Change as many diapers as you can with this collision type of
                 game.
               </p>
             </div>
-          </div>
+          </ProjectContainer>
         </>
       )}
-    </ProjectContainer>
+    </>
   );
 }
 

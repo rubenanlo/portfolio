@@ -30,6 +30,10 @@ const Container = styled.div`
   & img {
     margin-right: 0.5rem;
   }
+
+  .mailto {
+    width: 2rem;
+  }
 `;
 
 function App() {
@@ -55,8 +59,9 @@ function App() {
             <img src="../github.svg" alt="github" />
           </a>
           <a href="mailto:randinocv@gmail.com">
-            <img src="../email.svg" alt="email" />
+            <img className="mailto" src="../email.svg" alt="email" />
           </a>
+
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
