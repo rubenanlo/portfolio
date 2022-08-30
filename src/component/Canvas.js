@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 
-const Canva = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--dark-green);
-  z-index: -1;
-`;
+// const Canva = styled.div`
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: var(--dark-green);
+//   z-index: -1;
+// `;
 
 function Canvas() {
   useEffect(() => {
@@ -113,9 +113,9 @@ function Canvas() {
   });
 
   return (
-    <Canva>
-      <canvas id="canvas"></canvas>;
-    </Canva>
+    // <Canva>
+    <canvas id="canvas"></canvas>
+    // </Canva>
   );
 }
 

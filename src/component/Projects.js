@@ -13,10 +13,8 @@ const Container = styled.div`
     margin-bottom: 2.5rem;
   }
 
-  & .line {
-    border-bottom: 0.1rem solid;
-    width: 20%;
-    margin: auto;
+  & a {
+    color: RGB(191, 191, 191);
   }
 `;
 
@@ -25,17 +23,21 @@ function Projects() {
     <div>
       <Container>
         <div>
-          <h2>PlanThatMeal</h2>
+          <a href="https://planthatmeal.netlify.app/">
+            <h2>PlanThatMeal</h2>
+          </a>
           <p>Meal planner, recipes repository and shopping list generator.</p>
         </div>
-        <div className="line"></div>
         <div>
-          <h2>Guithub</h2>
+          <a href="http://guithub.herokuapp.com/">
+            <h2>Guithub</h2>
+          </a>
           <p>Community to share guitars.</p>
         </div>
-        <div className="line"></div>
         <div>
-          <h2>Tick tock diaper</h2>
+          <a href="https://rubenanlo.github.io/tick-tock-diaper/">
+            <h2>Tick tock diaper</h2>
+          </a>
           <p>
             Change as many diapers as you can with this collision type of game
           </p>
