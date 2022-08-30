@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
+const HomeContainer = styled.div`
   margin: 0rem 1rem 2.5rem 5rem;
   text-align: justify;
   font-weight: 100;
@@ -13,14 +13,14 @@ const Container = styled.div`
 function Home() {
   return (
     <div>
-      <Container>
+      <HomeContainer>
         <p>
           Lived in multiple countries, learner by heart, and always looking for
           the next challenge. This is me, coding is my passion, coding is
           communicating with others, and I love web applications because they
           connects people. Want to know more? check my projects, and contact me.
         </p>
-      </Container>
+      </HomeContainer>
     </div>
   );
 }

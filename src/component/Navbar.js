@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "../App.css";
 import styled from "styled-components";
 
-const Container = styled.div`
+const NavbarContainer = styled.div`
   margin-top: 6rem;
   display: flex;
   flex-direction: column;
@@ -26,10 +26,10 @@ const Container = styled.div`
 function Navbar() {
   return (
     <div>
-      <Container>
+      <NavbarContainer>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/Projects">Projects</NavLink>
-      </Container>
+      </NavbarContainer>
     </div>
   );
 }

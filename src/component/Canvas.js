@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
-// import styled from "styled-components";
+import styled from "styled-components";
 
-// const Canva = styled.div`
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: var(--dark-green);
-//   z-index: -1;
-// `;
+const CanvaContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-green);
+  z-index: -1;
+`;
 
 function Canvas() {
   useEffect(() => {
@@ -54,7 +54,11 @@ function Canvas() {
     const init = () => {
       particlesArray = [];
       let numberOfParticles = (canvas.height * canvas.width) / 9000;
-      for (let i = 0; i < numberOfParticles * 4; i++) {
+      for (
+        let i = 0;
+        i < numberOfParticles * (window.innerWidth < 1025 ? 4 : 2);
+        i++
+      ) {
         let size = Math.random() * 3 + 1;
         let x =
           Math.random() * (window.innerWidth - size * 2 - size * 2) + size * 2;
@@ -113,9 +117,9 @@ function Canvas() {
   });
 
   return (
-    // <Canva>
-    <canvas id="canvas"></canvas>
-    // </Canva>
+    <CanvaContainer>
+      <canvas id="canvas"></canvas>
+    </CanvaContainer>
   );
 }
 
