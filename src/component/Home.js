@@ -10,10 +10,16 @@ const HomeContainer = styled.div`
   bottom: 6vh;
   margin-left: 20vw;
 
-  @media (min-width > 1025) {
-    bottom: 50vh;
-    margin-left: 2rem;
-    right: 10vw;
+  @media (min-width: 1023px) {
+    bottom: 20vh;
+    margin-left: 60vw;
+    width: 30vw;
+  }
+
+  @media (orientation: landscape) {
+    margin-left: 55vw;
+    width: 34vw;
+    overflow: auto;
   }
 `;
 
@@ -23,9 +29,10 @@ function Home() {
       <HomeContainer>
         <p>
           Lived in multiple countries, learner by heart, and always looking for
-          the next challenge. This is me, coding is my passion, coding is
-          communicating with others, and I love web applications because they
-          connects people. Want to know more? check my projects, and contact me.
+          the next challenge. Coding is my passion, and an efficient way to
+          communicate with others. I love web development because it boosts
+          users' productivity while connecting with them. Want to know more?
+          check my projects, and contact me.
         </p>
       </HomeContainer>
     </div>

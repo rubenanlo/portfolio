@@ -10,7 +10,16 @@ const ProjectContainer = styled.div`
   margin: 0 5vw 0 20vw;
   overflow: auto;
 
-  @media (min-width: 1025px) {
+  & div {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+  }
+
+  & a {
+    color: var(--white);
+  }
+
+  @media (min-width: 1023px) {
     bottom: 20vh;
     margin-left: 60vw;
     width: 30vw;
@@ -19,13 +28,9 @@ const ProjectContainer = styled.div`
     }
   }
 
-  & div {
-    margin-bottom: 1.5rem;
-    cursor: pointer;
-  }
-
-  & a {
-    color: var(--white);
+  @media (orientation: landscape) {
+    margin-left: 55vw;
+    width: 34vw;
   }
 `;
 
@@ -36,9 +41,10 @@ const DescriptionProject = styled.div`
 
   & .show {
     position: absolute;
-    bottom: 32vh;
+    bottom: 20vh;
     margin-left: 2rem;
-    right: 45vw;
+    margin-right: 50vw;
+    text-align: justify;
   }
 
   & .show p {
@@ -48,6 +54,12 @@ const DescriptionProject = styled.div`
   & .show a {
     color: var(--white);
     margin-right: 1rem;
+  }
+
+  & .show img {
+    height: 10rem;
+    margin: auto;
+    border-radius: 0.3rem;
   }
 `;
 
@@ -68,7 +80,7 @@ function Projects() {
 
   return (
     <>
-      {window.innerWidth < 1025 ? (
+      {window.innerWidth < 1023 ? (
         <ProjectContainer>
           <div>
             <a
@@ -108,10 +120,11 @@ function Projects() {
         <>
           <DescriptionProject>
             <div className={className.plan ? "show" : "hide"}>
+              <img src="../../Plan-that-meal.png" alt="" />
               <p>
                 PlanThatMeal is a MERN fullstack responsive web application that
-                was created based on the people's needs on planning their meals
-                for the week. This web application relies on a self-created REST
+                was created based on the people's needs to plan their meals for
+                the week. This web application relies on a self-created REST
                 API, with CRUD functionality among four different models,
                 authentication, tailored content per type of user, and upload
                 image feature.
@@ -139,13 +152,15 @@ function Projects() {
               </a>
             </div>
             <div className={className.guit ? "show" : "hide"}>
+              <img src="../../Guithub.png" alt="" />
               <p>
                 GuitHub is a fullstack responsive web application that was
-                created to provide a platform where guitarists could share their
-                passion: guitars. This application was created based on express,
-                node.js, mongoDB, and handlebars, and included a self-created
-                REST API with CRUD functionality for 2 models (i.e., users,
-                guitars), authentication and tailored content per type of user.
+                created to provide a platform where guitarists could share the
+                looks of their guitars. This application was created based on
+                express, node.js, mongoDB, and handlebars, and included a
+                self-created REST API with CRUD functionality for 2 models
+                (i.e., users, guitars), authentication and tailored content per
+                type of user.
               </p>
               <a
                 href="http://guithub.herokuapp.com/"
@@ -163,6 +178,7 @@ function Projects() {
               </a>
             </div>
             <div className={className.tick ? "show" : "hide"}>
+              <img src="../../Tick-tock.png" alt="" />
               <p>
                 Tick tock diaper is a responsive collision type of game that was
                 created with JavaScript(ES6), HTML5, and CSS3. This game relies

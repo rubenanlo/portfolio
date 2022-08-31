@@ -56,7 +56,7 @@ function Canvas() {
       let numberOfParticles = (canvas.height * canvas.width) / 9000;
       for (
         let i = 0;
-        i < numberOfParticles * (window.innerWidth < 1025 ? 4 : 2);
+        i < numberOfParticles * (window.innerWidth < 1023 ? 4 : 2);
         i++
       ) {
         let size = Math.random() * 3 + 1;
