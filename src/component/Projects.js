@@ -41,7 +41,7 @@ const DescriptionProject = styled.div`
 
   & .show {
     position: absolute;
-    bottom: 20vh;
+    bottom: 30vh;
     margin-left: 2rem;
     margin-right: 50vw;
     text-align: justify;
@@ -120,7 +120,7 @@ function Projects() {
         <>
           <DescriptionProject>
             <div className={className.plan ? "show" : "hide"}>
-              <img src="../../Plan-that-meal.png" alt="" />
+              {/* <img src="../../Plan-that-meal.png" alt="" /> */}
               <p>
                 PlanThatMeal is a MERN fullstack responsive web application that
                 was created based on the people's needs to plan their meals for
@@ -152,7 +152,7 @@ function Projects() {
               </a>
             </div>
             <div className={className.guit ? "show" : "hide"}>
-              <img src="../../Guithub.png" alt="" />
+              {/* <img src="../../Guithub.png" alt="" /> */}
               <p>
                 GuitHub is a fullstack responsive web application that was
                 created to provide a platform where guitarists could share the
@@ -178,7 +178,7 @@ function Projects() {
               </a>
             </div>
             <div className={className.tick ? "show" : "hide"}>
-              <img src="../../Tick-tock.png" alt="" />
+              {/* <img src="../../Tick-tock.png" alt="" /> */}
               <p>
                 Tick tock diaper is a responsive collision type of game that was
                 created with JavaScript(ES6), HTML5, and CSS3. This game relies
