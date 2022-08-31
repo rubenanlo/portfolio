@@ -7,7 +7,7 @@ const HomeContainer = styled.div`
   font-weight: 100;
   line-height: 1.5rem;
   width: 60vw;
-  bottom: 8vh;
+  bottom: 6vh;
   margin-left: 20vw;
 
   @media (min-width > 1025) {
