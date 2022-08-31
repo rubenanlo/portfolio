@@ -21,6 +21,13 @@ const NavbarContainer = styled.div`
     border-bottom: 0.1rem solid;
     width: 50vw;
   }
+
+  @media (min-width: 1400px) {
+    width: 25vw;
+    & .active {
+      width: 25vw;
+    }
+  }
 `;
 
 function Navbar() {

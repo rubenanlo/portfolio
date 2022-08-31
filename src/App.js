@@ -34,6 +34,11 @@ const Container = styled.div`
   .mailto {
     width: 2rem;
   }
+  @media (min-width: 1500px) {
+    margin: 0 25%;
+    /* width: 25%; */
+    padding: 10px;
+  }
 `;
 
 function App() {

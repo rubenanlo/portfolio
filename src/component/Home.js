@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
-  position: absolute;
+  height: 55vh;
+  display: flex;
   text-align: justify;
   font-weight: 100;
   line-height: 1.5rem;
@@ -11,15 +12,25 @@ const HomeContainer = styled.div`
   margin-left: 20vw;
 
   @media (min-width: 1023px) {
-    bottom: 20vh;
-    margin-left: 60vw;
-    width: 30vw;
+    margin-top: 20vh;
+    margin-left: 49.95vw;
+    max-width: 30vw;
+    padding: 1rem;
   }
 
-  @media (orientation: landscape) {
+  @media (max-width: 1023px) and (orientation: landscape) {
+    display: block;
+    position: absolute;
+    top: 20%;
+    overflow: scroll;
     margin-left: 55vw;
+    height: 100%;
     width: 34vw;
-    overflow: auto;
+  }
+
+  @media (min-width: 1500px) {
+    width: 20vw;
+    margin-left: 30vw;
   }
 `;
 
