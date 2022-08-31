@@ -8,6 +8,7 @@ const ProjectContainer = styled.div`
   text-align: justify;
   bottom: 6vh;
   margin: 0 5vw 0 40vw;
+  overflow: auto;
 
   @media (min-width: 1025px) {
     bottom: 20vh;
@@ -38,6 +39,10 @@ const DescriptionProject = styled.div`
     bottom: 32vh;
     margin-left: 2rem;
     right: 45vw;
+  }
+
+  & .show p {
+    font-weight: 100;
   }
 
   & .show a {

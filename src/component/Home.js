@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
-  margin: 0rem 1rem 2.5rem 5rem;
+  position: absolute;
   text-align: justify;
   font-weight: 100;
-  position: absolute;
-  bottom: 0;
   line-height: 1.5rem;
+  bottom: 50vh;
+  margin-left: 2rem;
+  right: 10vw;
 `;
 
 function Home() {
