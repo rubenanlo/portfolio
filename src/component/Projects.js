@@ -7,7 +7,7 @@ const ProjectContainer = styled.div`
   position: absolute;
   text-align: justify;
   bottom: 6vh;
-  margin: 0 5vw 0 40vw;
+  margin: 0 5vw 0 20vw;
   overflow: auto;
 
   @media (min-width: 1025px) {
