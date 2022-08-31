@@ -6,9 +6,15 @@ const HomeContainer = styled.div`
   text-align: justify;
   font-weight: 100;
   line-height: 1.5rem;
-  bottom: 50vh;
-  margin-left: 2rem;
-  right: 10vw;
+  width: 60vw;
+  bottom: 8vh;
+  margin-left: 20vw;
+
+  @media (min-width > 1025) {
+    bottom: 50vh;
+    margin-left: 2rem;
+    right: 10vw;
+  }
 `;
 
 function Home() {

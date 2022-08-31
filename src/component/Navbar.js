@@ -4,7 +4,7 @@ import "../App.css";
 import styled from "styled-components";
 
 const NavbarContainer = styled.div`
-  margin-top: 6rem;
+  margin-top: 6vh;
   display: flex;
   flex-direction: column;
   line-height: 2rem;
